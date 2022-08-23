@@ -1,4 +1,4 @@
-name: Package test build
+name: ROS2 test build
 
 on:
   push:
