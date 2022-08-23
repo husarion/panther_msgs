@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package>
   <name>panther_msgs</name>
   <version>0.0.0</version>
@@ -5,7 +7,7 @@
     Custom messages for Panther robot
   </description>
   <maintainer email="krzysztof.wojciechowski@husarion.com">Krzysztof Wojciechowski</maintainer>
-  <license>Apache License Version 2.0</license>
+  <license>Apache License 2.0</license>
 
   <url type="website">https://husarion.com/</url>
   <url type="repository">https://github.com/husarion/panther_msgs/tree/ros1</url>
