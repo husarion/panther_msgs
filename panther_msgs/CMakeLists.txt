@@ -4,7 +4,7 @@ project(panther_msgs)
 find_package(catkin REQUIRED COMPONENTS message_generation std_msgs)
 
 add_message_files(
-  DIRECTORY msgsss
+  DIRECTORY msg
   FILES
   LightsMessage.msg)
 

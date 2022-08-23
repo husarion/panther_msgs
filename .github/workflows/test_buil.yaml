@@ -3,10 +3,10 @@ name: Package test build
 on:
   push:
     branches:
-      - 'ros1-devel'
+      - 'ros1'
   
 jobs:
-  catkin_make:
+  package-test-build:
     runs-on: ubuntu-20.04
     steps:
       - uses: ros-tooling/setup-ros@v0.3
