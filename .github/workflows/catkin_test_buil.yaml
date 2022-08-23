@@ -6,7 +6,7 @@ on:
       - 'ros1'
   
 jobs:
-  package-test-build:
+  catkin-test-build:
     runs-on: ubuntu-20.04
     steps:
       - uses: ros-tooling/setup-ros@v0.3
