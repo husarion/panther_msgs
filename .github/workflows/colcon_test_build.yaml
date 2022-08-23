@@ -3,7 +3,7 @@ name: ROS2 test build
 on:
   push:
     branches:
-      - 'ros2-devel'
+      - 'ros2'
   
 jobs:
   colcon-test-build:
