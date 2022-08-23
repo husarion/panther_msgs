@@ -6,7 +6,7 @@ on:
       - 'ros2-devel'
   
 jobs:
-  package-test-build:
+  colcon-test-build:
     runs-on: ubuntu-22.04
     steps:
       - uses: ros-tooling/setup-ros@v0.3
