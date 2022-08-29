@@ -1,0 +1,18 @@
+name: ROS1 test build
+
+on:
+  push:
+    branches:
+      - 'ros1'
+  
+jobs:
+  catkin-test-build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: ros-tooling/setup-ros@v0.3
+        with:
+          required-ros-distributions: noetic
+      - uses: ros-tooling/action-ros-ci@v0.2
+        with:
+          package-name: panther_msgs
+          target-ros1-distro: noetic
