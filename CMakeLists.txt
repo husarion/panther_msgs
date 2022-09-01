@@ -6,7 +6,8 @@ find_package(catkin REQUIRED COMPONENTS message_generation std_msgs)
 add_message_files(
   DIRECTORY msg
   FILES
-  LightsMessage.msg)
+  LightsMessage.msg
+  BatteryDriver.msg)
 
 generate_messages(DEPENDENCIES std_msgs)
 
