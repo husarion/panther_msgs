@@ -1,0 +1,5 @@
+float32 voltage
+float32 current
+panther_msgs/FaultFlag fault_flag
+panther_msgs/RuntimeError right_mot_run_err
+panther_msgs/RuntimeError left_mot_run_err

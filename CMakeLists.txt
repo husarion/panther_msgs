@@ -7,7 +7,10 @@ add_message_files(
   DIRECTORY msg
   FILES
   LightsMessage.msg
-  BatteryDriver.msg)
+  DriverStateArr.msg
+  DriverState.msg
+  FaultFlag.msg
+  RuntimeError.msg)
 
 generate_messages(DEPENDENCIES std_msgs)
 
