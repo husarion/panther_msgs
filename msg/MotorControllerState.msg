@@ -1,0 +1,5 @@
+float32 voltage
+float32 current
+panther_msgs/FalutFlag fault_flag
+panther_msgs/MotorState left_motor
+panther_msgs/MotorState right_motor

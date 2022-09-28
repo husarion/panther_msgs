@@ -7,8 +7,9 @@ add_message_files(
   DIRECTORY msg
   FILES
   LightsMessage.msg
-  DriverStateArr.msg
   DriverState.msg
+  MotorControllerState.msg
+  MotorState.msg
   FaultFlag.msg
   RuntimeError.msg)
 
