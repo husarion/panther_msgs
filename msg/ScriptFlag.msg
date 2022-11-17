@@ -1,0 +1,3 @@
+bool loop_error
+bool encoder_disconected
+bool amp_limiter
