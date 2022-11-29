@@ -12,7 +12,8 @@ add_message_files(
   MotorState.msg
   FaultFlag.msg
   RuntimeError.msg
-  ScriptFlag.msg)
+  ScriptFlag.msg
+  SystemStatus.msg)
 
 generate_messages(DEPENDENCIES std_msgs)
 

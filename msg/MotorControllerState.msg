@@ -1,5 +1,6 @@
 float32 voltage
 float32 current
+float32 temperature
 panther_msgs/FaultFlag fault_flag
 panther_msgs/ScriptFlag script_flag
 panther_msgs/MotorState left_motor
