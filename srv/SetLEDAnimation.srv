@@ -1,0 +1,5 @@
+panther_msgs/LEDAnimation animation
+bool repeat
+string param
+---
+string result

@@ -13,7 +13,16 @@ add_message_files(
   FaultFlag.msg
   RuntimeError.msg
   ScriptFlag.msg
-  SystemStatus.msg)
+  SystemStatus.msg
+  LEDAnimation.msg)
+
+add_service_files(
+  DIRECTORY srv
+  FILES
+  SetLEDBrightness.srv
+  SetLEDAnimation.srv
+  SetLEDImageAnimation.srv
+)
 
 generate_messages(DEPENDENCIES std_msgs)
 
