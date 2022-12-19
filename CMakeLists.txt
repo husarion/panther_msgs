@@ -6,21 +6,21 @@ find_package(catkin REQUIRED COMPONENTS message_generation std_msgs)
 add_message_files(
   DIRECTORY msg
   FILES
-  LightsMessage.msg
   DriverState.msg
+  FaultFlag.msg
+  LEDAnimation.msg
   MotorControllerState.msg
   MotorState.msg
-  FaultFlag.msg
   RuntimeError.msg
   ScriptFlag.msg
   SystemStatus.msg
-  LEDAnimation.msg)
+)
 
 add_service_files(
   DIRECTORY srv
   FILES
-  SetLEDBrightness.srv
   SetLEDAnimation.srv
+  SetLEDBrightness.srv
   SetLEDImageAnimation.srv
 )
 
