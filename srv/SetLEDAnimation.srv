@@ -1,5 +1,4 @@
 panther_msgs/LEDAnimation animation
-bool repeat
-string param
+bool repeating
 ---
 string result
