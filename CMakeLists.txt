@@ -9,6 +9,7 @@ add_message_files(
   DriverState.msg
   FaultFlag.msg
   LEDAnimation.msg
+  LEDImageAnimation.msg
   MotorControllerState.msg
   MotorState.msg
   RuntimeError.msg

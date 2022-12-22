@@ -1,7 +1,6 @@
-string image_front
-string image_rear
-float32 duration
-string color
-uint8 repeat
+panther_msgs/LEDImageAnimation front
+panther_msgs/LEDImageAnimation rear
+bool interrupting
+bool repeating
 ---
 string result
