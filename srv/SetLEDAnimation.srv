@@ -1,4 +1,5 @@
 panther_msgs/LEDAnimation animation
 bool repeating
 ---
-string result
+bool success
+string message

@@ -1,3 +1,4 @@
 float32 data
 ---
-string result
+bool success
+string message

@@ -3,4 +3,5 @@ panther_msgs/LEDImageAnimation rear
 bool interrupting
 bool repeating
 ---
-string result
+bool success
+string message
