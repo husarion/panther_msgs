@@ -6,7 +6,5 @@ uint16 AUTONOMOUS_ACTION = 4
 uint16 GOAL_ACHIEVED = 5
 uint16 LOW_BATTERY = 6
 uint16 CRITICAL_BATTERY = 7
-uint16 SHOW_BATTERY = 8
 
 uint16 id
-string name
