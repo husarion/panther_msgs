@@ -7,6 +7,7 @@ uint16 GOAL_ACHIEVED = 5
 uint16 LOW_BATTERY = 6
 uint16 CRITICAL_BATTERY = 7
 uint16 BATTERY_STATE = 8
+uint16 CHARGING_BATTERY = 9
 
 uint16 id
 float32 param
