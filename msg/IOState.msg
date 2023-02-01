@@ -1,4 +1,4 @@
-bool aux_pwr
-bool pwr_btn
+bool aux_power
+bool power_btn
 bool charger_connected
 bool fan
