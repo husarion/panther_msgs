@@ -6,11 +6,12 @@ find_package(catkin REQUIRED COMPONENTS message_generation std_msgs)
 add_message_files(
   DIRECTORY msg
   FILES
-  LightsMessage.msg
   DriverState.msg
+  FaultFlag.msg
+  IOState.msg
+  LightsMessage.msg
   MotorControllerState.msg
   MotorState.msg
-  FaultFlag.msg
   RuntimeError.msg
   ScriptFlag.msg
   SystemStatus.msg)
