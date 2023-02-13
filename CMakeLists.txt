@@ -8,6 +8,7 @@ add_message_files(
   FILES
   DriverState.msg
   FaultFlag.msg
+  IOState.msg
   LEDAnimation.msg
   LEDImageAnimation.msg
   MotorControllerState.msg
