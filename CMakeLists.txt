@@ -10,6 +10,7 @@ add_message_files(
   FaultFlag.msg
   IOState.msg
   LEDAnimation.msg
+  LEDAnimationQueue.msg
   LEDImageAnimation.msg
   MotorControllerState.msg
   MotorState.msg
