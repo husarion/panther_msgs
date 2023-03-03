@@ -10,4 +10,4 @@ uint16 BATTERY_STATE = 8
 uint16 CHARGING_BATTERY = 9
 
 uint16 id
-float32 param
+string param
