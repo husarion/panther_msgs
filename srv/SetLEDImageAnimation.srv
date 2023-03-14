@@ -1,0 +1,7 @@
+panther_msgs/LEDImageAnimation front
+panther_msgs/LEDImageAnimation rear
+bool interrupting
+bool repeating
+---
+bool success
+string message

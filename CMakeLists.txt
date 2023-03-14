@@ -9,12 +9,23 @@ add_message_files(
   DriverState.msg
   FaultFlag.msg
   IOState.msg
-  LightsMessage.msg
+  LEDAnimation.msg
+  LEDAnimationQueue.msg
+  LEDImageAnimation.msg
   MotorControllerState.msg
   MotorState.msg
   RuntimeError.msg
   ScriptFlag.msg
-  SystemStatus.msg)
+  SystemStatus.msg
+)
+
+add_service_files(
+  DIRECTORY srv
+  FILES
+  SetLEDAnimation.srv
+  SetLEDBrightness.srv
+  SetLEDImageAnimation.srv
+)
 
 generate_messages(DEPENDENCIES std_msgs)
 
