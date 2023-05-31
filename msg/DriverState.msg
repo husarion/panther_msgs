@@ -1,0 +1,2 @@
+panther_msgs/MotorControllerState front
+panther_msgs/MotorControllerState rear
