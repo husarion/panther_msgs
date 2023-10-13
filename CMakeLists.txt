@@ -22,6 +22,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/RuntimeError.msg"
   "msg/ScriptFlag.msg"
   "msg/SystemStatus.msg"
+  "srv/SetLEDAnimation.srv"
+  "srv/SetLEDBrightness.srv"
+  "srv/SetLEDImageAnimation.srv"
   DEPENDENCIES std_msgs
 )
 
