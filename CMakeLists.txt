@@ -8,14 +8,21 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/DriverState.msg"
   "msg/FaultFlag.msg"
+  "msg/IOState.msg"
+  "msg/LEDAnimation.msg"
+  "msg/LEDAnimationQueue.msg"
+  "msg/LEDImageAnimation.msg"
   "msg/MotorControllerState.msg"
   "msg/MotorState.msg"
   "msg/RuntimeError.msg"
   "msg/ScriptFlag.msg"
+  "msg/SystemStatus.msg"
+  DEPENDENCIES std_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)
