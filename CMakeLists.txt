@@ -1,22 +1,31 @@
-cmake_minimum_required(VERSION 3.5)
-
+cmake_minimum_required(VERSION 3.10.2)
 project(panther_msgs)
 
-# Default to C++14
-if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
-endif()
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(builtin_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/LightsMessage.msg"
-  DEPENDENCIES builtin_interfaces std_msgs
+  "msg/DriverState.msg"
+  "msg/FaultFlag.msg"
+  "msg/IOState.msg"
+  "msg/LEDAnimation.msg"
+  "msg/LEDAnimationQueue.msg"
+  "msg/LEDImageAnimation.msg"
+  "msg/MotorControllerState.msg"
+  "msg/MotorState.msg"
+  "msg/RuntimeError.msg"
+  "msg/ScriptFlag.msg"
+  "msg/SystemStatus.msg"
+  "srv/SetLEDAnimation.srv"
+  "srv/SetLEDBrightness.srv"
+  "srv/SetLEDImageAnimation.srv"
+  DEPENDENCIES std_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)
