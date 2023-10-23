@@ -1,2 +1,6 @@
 panther_msgs/MotorControllerState front
 panther_msgs/MotorControllerState rear
+bool error
+bool read_error_sdo
+bool read_error_pdo
+bool write_error
