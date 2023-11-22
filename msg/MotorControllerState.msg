@@ -5,4 +5,4 @@ panther_msgs/FaultFlag fault_flag
 panther_msgs/ScriptFlag script_flag
 panther_msgs/MotorState left_motor
 panther_msgs/MotorState right_motor
-bool old_data
+bool data_timed_out
