@@ -6,3 +6,4 @@ panther_msgs/ScriptFlag script_flag
 panther_msgs/MotorState left_motor
 panther_msgs/MotorState right_motor
 bool data_timed_out
+bool can_net_err
