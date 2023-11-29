@@ -3,7 +3,7 @@ float32 current
 float32 temperature
 panther_msgs/FaultFlag fault_flag
 panther_msgs/ScriptFlag script_flag
-panther_msgs/MotorState left_motor
-panther_msgs/MotorState right_motor
+panther_msgs/RuntimeError left_motor_runtime_error
+panther_msgs/RuntimeError right_motor_runtime_error
 bool data_timed_out
 bool can_net_err

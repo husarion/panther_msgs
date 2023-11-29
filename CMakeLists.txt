@@ -13,7 +13,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/DriverState.msg"
   "msg/FaultFlag.msg"
   "msg/MotorControllerState.msg"
-  "msg/MotorState.msg"
   "msg/RuntimeError.msg"
   "msg/ScriptFlag.msg"
 )
