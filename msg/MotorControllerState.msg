@@ -8,5 +8,6 @@ panther_msgs/ScriptFlag script_flag
 panther_msgs/RuntimeError left_motor_runtime_error
 panther_msgs/RuntimeError right_motor_runtime_error
 
-bool data_timed_out
+bool motor_states_data_timed_out
+bool driver_state_data_timed_out
 bool can_net_err
