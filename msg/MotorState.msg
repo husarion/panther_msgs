@@ -1,2 +1,0 @@
-string motor_joint_name
-panther_msgs/RuntimeError runtime_error

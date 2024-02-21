@@ -1,4 +1,3 @@
-bool can_net_err
 bool overheat
 bool overvoltage
 bool undervoltage

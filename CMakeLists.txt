@@ -18,7 +18,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/LEDAnimationQueue.msg"
   "msg/LEDImageAnimation.msg"
   "msg/MotorControllerState.msg"
-  "msg/MotorState.msg"
   "msg/RuntimeError.msg"
   "msg/ScriptFlag.msg"
   "msg/SystemStatus.msg"
