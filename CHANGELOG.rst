@@ -2,8 +2,8 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.0 (2024-03-29)
+------------------
 * Merge pull request `#19 <https://github.com/husarion/panther_msgs/issues/19>`_ from husarion/ros2-fix-typo
   fix typo
 * fix typo
