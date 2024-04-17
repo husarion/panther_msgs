@@ -18,8 +18,11 @@ jobs:
         outputs:
             new_version: ${{ steps.release.outputs.new_version }}
         steps:
-            - name: Checkout
-              uses: actions/checkout@v3
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+                  fetch-tags: true
 
             - name: Prepare release
               id: prepare-release
@@ -29,8 +32,6 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   git_user: action-bot
                   git_email: action-bot@action-bot.com
-
-
 
             # - name: Create release
             #   uses: softprops/action-gh-release@v1
