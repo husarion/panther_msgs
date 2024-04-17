@@ -19,13 +19,28 @@ jobs:
             new_version: ${{ steps.release.outputs.new_version }}
         steps:
             - name: Checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
 
-            - name: Catkin release
-              id: release
-              uses: husarion-ci/action-catkin-release@v0.2.1
+            - name: Prepare release
+              id: prepare-release
+              uses: husarion-ci/action-catkin-release@fix-action
               with:
                   new_version: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.release-tag || github.event_name == 'repository_dispatch' && github.event.client_payload['release-tag'] }}
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   git_user: action-bot
                   git_email: action-bot@action-bot.com
+
+
+
+            # - name: Create release
+            #   uses: softprops/action-gh-release@v1
+            #   if: ${{needs.prepare-arguments.outputs.create_release == 'yes'}}
+            #   needs: prepare-release
+            #   with:
+            #       tag_name: ${{ steps.bump-semver.outputs.new_version }}
+            #       generate_release_notes: "true"
+            #       token: ${{ secrets.WORKFLOW_PAT }}
+            #       draft: "false"
+            #       name: "RCP Pico Board Micropython firmware ${{ steps.bump-semver.outputs.new_version }}"
+            #       files: |
+            #           pico_upy_fw.zip
