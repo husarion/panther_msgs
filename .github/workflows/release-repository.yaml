@@ -1,9 +1,6 @@
 name: Release panther_msgs repository
 
 on:
-    pull_request: # to be removed
-        branches:
-            - ros2
     workflow_dispatch:
         inputs:
             release-tag:
@@ -26,7 +23,7 @@ jobs:
 
             - name: Catkin release
               id: release
-              uses: husarion-ci/action-release@v0.1.4
+              uses: husarion-ci/action-catkin-release@v0.1.4
               with:
                   bump: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.release-tag || github.event_name == 'repository_dispatch' && github.event.client_payload['release-tag'] }}
                   github_token: ${{ secrets.GITHUB_TOKEN }}
