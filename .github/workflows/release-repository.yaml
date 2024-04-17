@@ -23,7 +23,7 @@ jobs:
 
             - name: Catkin release
               id: release
-              uses: husarion-ci/action-catkin-release@v0.2.0
+              uses: husarion-ci/action-catkin-release@v0.2.1
               with:
                   new_version: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.release-tag || github.event_name == 'repository_dispatch' && github.event.client_payload['release-tag'] }}
                   github_token: ${{ secrets.GITHUB_TOKEN }}
