@@ -2,6 +2,14 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#22 <https://github.com/husarion/panther_msgs/issues/22>`_ from husarion/ros2-update-workflow
+  Update setup-ros
+* Merge pull request `#21 <https://github.com/husarion/panther_msgs/issues/21>`_ from husarion/release-2.0.0-alpha
+  Release 2.0.0 alpha
+* Contributors: Paweł Kowalski, rafal-gorecki
+
 2.0.0 (2024-03-29)
 ------------------
 * Merge pull request `#19 <https://github.com/husarion/panther_msgs/issues/19>`_ from husarion/ros2-fix-typo
