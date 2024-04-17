@@ -1,6 +1,9 @@
 name: Release panther_msgs repository
 
 on:
+    pull_request: # to be removed
+        branches:
+            - ros2
     workflow_dispatch:
         inputs:
             release-tag:
