@@ -26,9 +26,9 @@ jobs:
 
             - name: Prepare release
               id: prepare-release
-              uses: husarion-ci/action-catkin-release@fix-action
+              uses: husarion-ci/action-catkin-release@v0.1.4
               with:
-                  new_version: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.release-tag || github.event_name == 'repository_dispatch' && github.event.client_payload['release-tag'] }}
+                  bump: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.release-tag || github.event_name == 'repository_dispatch' && github.event.client_payload['release-tag'] }}
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   git_user: action-bot
                   git_email: action-bot@action-bot.com
