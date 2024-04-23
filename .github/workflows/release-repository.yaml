@@ -48,22 +48,28 @@ jobs:
             #       pr_title: Release ${{ steps.create_release.outputs.version}}
             #       pr_body: This PR incorporates package(s) version and changelog update.
             #       github_token: ${{ secrets.GITHUB_TOKEN }}
-            
-            - name: Create Pull Request
-              id: create_pr
-              uses: peter-evans/create-pull-request@v6
-              with:
-                token: ${{ secrets.GITHUB_TOKEN }}
-                # base: ${{ github.event.inputs.target_branch }}
-                base: ros2
-                branch: ${{ steps.create_release.outputs.created_branch }}
-                # branch: ${{ steps.create_release.outputs.created_branch }}
-                # delete-branch: true
-                title: Release ${{ steps.create_release.outputs.version}}
-                body: This PR incorporates package(s) version and changelog update.
-                labels: |
-                        release
-                        automated pr
+            - name: Create pull request
+              run: |
+                  gh pr create
+                  --base ${{ github.event.inputs.target_branch }}
+                  --head ${{ steps.create_release.outputs.created_branch }}
+                  --title "Release ${{ steps.create_release.outputs.version}}"
+                  --body "This PR incorporates package(s) version and changelog update."
+            # - name: Create Pull Request
+            #   id: create_pr
+            #   uses: peter-evans/create-pull-request@v6
+            #   with:
+            #     token: ${{ secrets.GITHUB_TOKEN }}
+            #     # base: ${{ github.event.inputs.target_branch }}
+            #     base: ros2
+            #     branch: ${{ steps.create_release.outputs.created_branch }}
+            #     # branch: ${{ steps.create_release.outputs.created_branch }}
+            #     # delete-branch: true
+            #     title: Release ${{ steps.create_release.outputs.version}}
+            #     body: This PR incorporates package(s) version and changelog update.
+            #     labels: |
+            #             release
+            #             automated pr
             - name: Close pull request
               if: ${{ github.event.inputs.automatic_merge == true }}
               uses: peter-evans/close-pull@v3
