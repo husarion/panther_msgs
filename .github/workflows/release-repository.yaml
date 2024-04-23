@@ -49,6 +49,8 @@ jobs:
             #       pr_body: This PR incorporates package(s) version and changelog update.
             #       github_token: ${{ secrets.GITHUB_TOKEN }}
             - name: Create pull request
+              env:
+                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   gh pr create
                   --base ${{ github.event.inputs.target_branch }}
