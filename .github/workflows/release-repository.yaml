@@ -3,62 +3,82 @@ name: Release panther_msgs repository
 on:
     workflow_dispatch:
         inputs:
-            release-tag:
-                description: Release tag
+            target_branch:
+                description: Target branch for the release.
                 required: true
-            release-name:
-                description: Release name
+                default: ros2
+            version:
+                description: New version (used for tag and package versioning).
                 required: true
+            release_name:
+                description: Release name (version in the first place is recommended).
+                required: true
+            automatic_merge:
+                type: boolean
+                default: true
+                description: Merge release pull request automatically.
+            automatic_release:
+                type: boolean
+                default: true
+                description: Release repository automatically.
     repository_dispatch:
 
 jobs:
     release:
         name: Release repository
         runs-on: ubuntu-22.04
-        # outputs:
-            # new_version: ${{ steps.release.outputs.new_version }}
         steps:
-            - name: checkout
-              uses: actions/checkout@v2
-            - name: create release
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event.inputs.target_branch }}
+            - name: Create release candidate
               id: create_release
               uses: at-wat/catkin-release-action@v1
               with:
-                version: ${{ github.event.inputs.release-tag }}
-                git_user: action-bot
-                git_email: action-bot@action-bot.com
-                github_token: ${{ secrets.GITHUB_TOKEN }}
-            - name: open pull-request
-              uses: repo-sync/pull-request@v2
-              with:
-                source_branch: ${{ steps.create_release.outputs.created_branch }}
-                destination_branch: ros2-devel
-                pr_title: Release ${{ steps.create_release.outputs.version}}
-                pr_body: close \#${{ github.event.issue.number }}
-                github_token: ${{ secrets.GITHUB_TOKEN }}
-##########
-        # steps:
-        #     - name: Checkout repository
-        #       uses: actions/checkout@v4
-
-        #     - name: Prepare release
-        #       id: prepare-release
-        #       uses: husarion-ci/action-catkin-release@v0.1.4
-        #       with:
-        #           bump: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.release-tag || github.event_name == 'repository_dispatch' && github.event.client_payload['release-tag'] }}
-        #           github_token: ${{ secrets.GITHUB_TOKEN }}
-        #           git_user: action-bot
-        #           git_email: action-bot@action-bot.com
-##########
-            # - name: Create release
-            #   uses: softprops/action-gh-release@v1
-            #   if: ${{needs.prepare-arguments.outputs.create_release == 'yes'}}
-            #   needs: prepare-release
+                  version: ${{ github.event.inputs.version }}
+                  git_user: action-bot
+                  git_email: action-bot@action-bot.com
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+            # - name: Open pull request
+            #   uses: repo-sync/pull-request@v2
             #   with:
-            #       tag_name: ${{ steps.bump-semver.outputs.new_version }}
-            #       generate_release_notes: "true"
-            #       token: ${{ secrets.WORKFLOW_PAT }}
-            #       draft: "false"
-            #       name: "RCP Pico Board Micropython firmware ${{ steps.bump-semver.outputs.new_version }}"
-            #       files: |
-            #           pico_upy_fw.zip
+            #       source_branch: ${{ steps.create_release.outputs.created_branch }}
+            #       destination_branch: ${{ github.event.inputs.target_branch }}
+            #       pr_title: Release ${{ steps.create_release.outputs.version}}
+            #       pr_body: This PR incorporates package(s) version and changelog update.
+            #       github_token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Create Pull Request
+              id: create_pr
+              uses: peter-evans/create-pull-request@v6
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+                base: ${{ github.event.inputs.target_branch }}
+                branch: ${{ steps.create_release.outputs.created_branch }}
+                delete-branch: true
+                title: Release ${{ steps.create_release.outputs.version}}
+                body: This PR incorporates package(s) version and changelog update.
+                labels: |
+                        release
+                        automated pr
+            - name: Close pull request
+              if: ${{ github.event.inputs.automatic_merge == true }}
+              uses: peter-evans/close-pull@v3
+              with:
+                  pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
+                  comment: Auto-closing pull request
+                  delete-branch: true
+            
+##########
+# - name: Create release
+#   uses: softprops/action-gh-release@v1
+#   if: ${{needs.prepare-arguments.outputs.create_release == 'yes'}}
+#   needs: prepare-release
+#   with:
+#       tag_name: ${{ steps.bump-semver.outputs.new_version }}
+#       generate_release_notes: "true"
+#       token: ${{ secrets.WORKFLOW_PAT }}
+#       draft: "false"
+#       name: "RCP Pico Board Micropython firmware ${{ steps.bump-semver.outputs.new_version }}"
+#       files: |
+#           pico_upy_fw.zip
