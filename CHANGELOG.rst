@@ -2,8 +2,8 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2024-04-30)
+------------------
 * Revert version in package.xml (`#29 <https://github.com/husarion/panther_msgs/issues/29>`_)
 * Ros2 automatize release process (`#25 <https://github.com/husarion/panther_msgs/issues/25>`_)
 * Merge pull request `#22 <https://github.com/husarion/panther_msgs/issues/22>`_ from husarion/ros2-update-workflow
