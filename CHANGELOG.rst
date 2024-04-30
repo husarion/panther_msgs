@@ -2,8 +2,8 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2024-04-30)
+------------------
 * Add PR body (`#33 <https://github.com/husarion/panther_msgs/issues/33>`_)
 * Update workflow (`#30 <https://github.com/husarion/panther_msgs/issues/30>`_)
 * Revert version in package.xml (`#29 <https://github.com/husarion/panther_msgs/issues/29>`_)
