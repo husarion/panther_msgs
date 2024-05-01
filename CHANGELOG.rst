@@ -2,6 +2,20 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.1 (2024-05-01)
+------------------
+* Ros2 workflow missing arguments (`#49 <https://github.com/husarion/panther_msgs/issues/49>`_)
+* Ros2 handle boolean args (`#43 <https://github.com/husarion/panther_msgs/issues/43>`_)
+* Prevent unwanted PR (`#35 <https://github.com/husarion/panther_msgs/issues/35>`_)
+* Add PR body (`#33 <https://github.com/husarion/panther_msgs/issues/33>`_)
+* Update workflow (`#30 <https://github.com/husarion/panther_msgs/issues/30>`_)
+* Revert version in package.xml (`#29 <https://github.com/husarion/panther_msgs/issues/29>`_)
+* Ros2 automatize release process (`#25 <https://github.com/husarion/panther_msgs/issues/25>`_)
+* Merge pull request `#22 <https://github.com/husarion/panther_msgs/issues/22>`_ from husarion/ros2-update-workflow
+* Update setup-ros
+* Merge pull request `#21 <https://github.com/husarion/panther_msgs/issues/21>`_ from husarion/release-2.0.0-alpha
+* Contributors: Jakub Delicat, Paweł Irzyk, Paweł Kowalski, rafal-gorecki
+
 2.0.0 (2024-03-29)
 ------------------
 * Merge pull request `#19 <https://github.com/husarion/panther_msgs/issues/19>`_ from husarion/ros2-fix-typo
