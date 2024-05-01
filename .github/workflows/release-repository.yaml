@@ -64,7 +64,7 @@ jobs:
               with:
                   ref: ${{ env.MAIN_BRANCH }}
 
-            - name: Create pull request to main branch
+            - name: Create pull request to main
               if: ${{ github.event.inputs.target_branch != env.MAIN_BRANCH && fromJSON(github.event.inputs.automatic_mode) == true }}
               run: |
                   gh pr create \
@@ -73,7 +73,7 @@ jobs:
                   --title "Release ${{ steps.create_release_candidate.outputs.version}} to ${{ env.MAIN_BRANCH }}" \
                   --body "This PR incorporates package(s) version and changelog update."
 
-            - name: Merge pull request
+            - name: Merge pull request to main
               if: ${{ github.event.inputs.target_branch != env.MAIN_BRANCH && fromJSON(github.event.inputs.automatic_mode) == true }}
               run: |
                   gh pr merge ${{ github.event.inputs.target_branch }} \
