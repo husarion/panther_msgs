@@ -83,8 +83,9 @@ jobs:
               if: ${{ fromJSON(github.event.inputs.automatic_mode) == true && fromJSON(github.event.inputs.prerelease) == true}}
               run: |
                   gh release create ${{ steps.create_release_candidate.outputs.version }} \
+                  --target ${{ env.MAIN_BRANCH }} \
                   --title ${{ github.event.inputs.release_name }} \
-                  --notes-from-tag \
+                  --generate-notes \
                   --prerelease
 
             - name: Create release
