@@ -2,8 +2,8 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2024-05-01)
+------------------
 * Prevent unwanted PR (`#35 <https://github.com/husarion/panther_msgs/issues/35>`_)
 * Add PR body (`#33 <https://github.com/husarion/panther_msgs/issues/33>`_)
 * Update workflow (`#30 <https://github.com/husarion/panther_msgs/issues/30>`_)
