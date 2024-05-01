@@ -2,8 +2,8 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2024-05-01)
+------------------
 * Ros2 handle boolean args (`#43 <https://github.com/husarion/panther_msgs/issues/43>`_)
 * Prevent unwanted PR (`#35 <https://github.com/husarion/panther_msgs/issues/35>`_)
 * Add PR body (`#33 <https://github.com/husarion/panther_msgs/issues/33>`_)
