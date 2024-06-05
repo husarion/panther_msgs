@@ -1,7 +1,6 @@
 std_msgs/Header header
 
-panther_msgs/MotorControllerState front
-panther_msgs/MotorControllerState rear
+panther_msgs/MotorControllerState motor_controller
 
 bool error
 bool write_pdo_cmds_error
