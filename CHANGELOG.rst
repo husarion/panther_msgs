@@ -2,6 +2,9 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.2 (2024-06-05)
+------------------
+
 2.0.1 (2024-05-01)
 ------------------
 * Ros2 workflow missing arguments (`#49 <https://github.com/husarion/panther_msgs/issues/49>`_)
