@@ -2,8 +2,8 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.3 (2024-06-06)
+------------------
 * Ros2 improve release process (`#58 <https://github.com/husarion/panther_msgs/issues/58>`_)
 * Contributors: Paweł Irzyk
 
