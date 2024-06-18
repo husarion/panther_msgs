@@ -1,2 +1,3 @@
 # panther_msgs
-Custom ROS messages and services for Panther
+
+Custom ROS messages and services for Panther robot.
