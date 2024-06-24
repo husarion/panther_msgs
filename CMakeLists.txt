@@ -10,7 +10,9 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 
-rosidl_generate_interfaces(${PROJECT_NAME}
+rosidl_generate_interfaces(
+  ${PROJECT_NAME}
+  "msg/ChargingStatus.msg"
   "msg/DriverState.msg"
   "msg/FaultFlag.msg"
   "msg/IOState.msg"
@@ -24,8 +26,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/SetLEDAnimation.srv"
   "srv/SetLEDBrightness.srv"
   "srv/SetLEDImageAnimation.srv"
-  DEPENDENCIES std_msgs
-)
+  DEPENDENCIES
+  std_msgs)
 
 ament_export_dependencies(rosidl_default_runtime)
 
