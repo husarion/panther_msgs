@@ -2,6 +2,17 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.4 (2024-06-28)
+------------------
+* Add grant permission step in workflow
+* hotfix-allow-unshallow-copy
+* Add ChargingStatus message (`#64 <https://github.com/husarion/panther_msgs/issues/64>`_)
+* Merge pull request `#63 <https://github.com/husarion/panther_msgs/issues/63>`_ from husarion/ros2-update-iostate-msg
+* Add led_control field
+* Enable fetch full history - workflow (`#62 <https://github.com/husarion/panther_msgs/issues/62>`_)
+* Ros2 workflow bugfix update devel (`#61 <https://github.com/husarion/panther_msgs/issues/61>`_)
+* Contributors: Dawid Kmak, Paweł Irzyk, pawelirh
+
 2.0.3 (2024-06-06)
 ------------------
 * Ros2 improve release process (`#58 <https://github.com/husarion/panther_msgs/issues/58>`_)
