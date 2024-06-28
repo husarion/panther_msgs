@@ -54,11 +54,11 @@ jobs:
           --title "Release ${{ steps.catkin_release.outputs.version}}" \
           --body "This PR incorporates package(s) version and changelog update."
 
-      - name: Catkin release - merge PR
-        if: ${{ fromJSON(github.event.inputs.automatic_mode) == true }}
-        run: |
-          gh pr merge ${{ steps.catkin_release.outputs.created_branch }} \
-          --merge --delete-branch
+      # - name: Catkin release - merge PR
+      #   if: ${{ fromJSON(github.event.inputs.automatic_mode) == true }}
+      #   run: |
+      #     gh pr merge ${{ steps.catkin_release.outputs.created_branch }} \
+      #     --merge --delete-branch
 
       - name: Grant permissions # Required permission grant after at-wat/catkin-release-action@v1 action
         if: ${{ fromJSON(inputs.automatic_mode) == true }}
@@ -73,41 +73,41 @@ jobs:
           ref: ${{ env.MAIN_BRANCH }}
           fetch-depth: 0
 
-      - name: Create PR to main branch
-        if: ${{ github.event.inputs.release_candidate != env.MAIN_BRANCH && fromJSON(inputs.automatic_mode)
-          == true }}
-        run: |
-          gh pr create \
-          --base ${{ env.MAIN_BRANCH }} \
-          --head ${{ github.event.inputs.release_candidate }} \
-          --title "Release ${{ steps.catkin_release.outputs.version}} to ${{ env.MAIN_BRANCH }}" \
-          --body "This PR incorporates package(s) version and changelog update."
+      # - name: Create PR to main branch
+      #   if: ${{ github.event.inputs.release_candidate != env.MAIN_BRANCH && fromJSON(inputs.automatic_mode)
+      #     == true }}
+      #   run: |
+      #     gh pr create \
+      #     --base ${{ env.MAIN_BRANCH }} \
+      #     --head ${{ github.event.inputs.release_candidate }} \
+      #     --title "Release ${{ steps.catkin_release.outputs.version}} to ${{ env.MAIN_BRANCH }}" \
+      #     --body "This PR incorporates package(s) version and changelog update."
 
-      - name: Merge PR to main branch
-        if: ${{ github.event.inputs.release_candidate != env.MAIN_BRANCH && fromJSON(inputs.automatic_mode)
-          == true }}
-        run: |
-          gh pr merge ${{ github.event.inputs.release_candidate }} \
-          --merge --delete-branch
+      # - name: Merge PR to main branch
+      #   if: ${{ github.event.inputs.release_candidate != env.MAIN_BRANCH && fromJSON(inputs.automatic_mode)
+      #     == true }}
+      #   run: |
+      #     gh pr merge ${{ github.event.inputs.release_candidate }} \
+      #     --merge --delete-branch
 
-      - name: Create prerelease
-        if: ${{ fromJSON(github.event.inputs.automatic_mode) == true && fromJSON(github.event.inputs.prerelease)
-          == true}}
-        run: |
-          gh release create ${{ steps.catkin_release.outputs.version }} \
-          --target ${{ env.MAIN_BRANCH }} \
-          --title ${{ github.event.inputs.release_name }} \
-          --generate-notes \
-          --prerelease
+      # - name: Create prerelease
+      #   if: ${{ fromJSON(github.event.inputs.automatic_mode) == true && fromJSON(github.event.inputs.prerelease)
+      #     == true}}
+      #   run: |
+      #     gh release create ${{ steps.catkin_release.outputs.version }} \
+      #     --target ${{ env.MAIN_BRANCH }} \
+      #     --title ${{ github.event.inputs.release_name }} \
+      #     --generate-notes \
+      #     --prerelease
 
-      - name: Create release
-        if: ${{ fromJSON(github.event.inputs.automatic_mode) == true && fromJSON(github.event.inputs.prerelease)
-          == false}}
-        run: |
-          gh release create ${{ steps.catkin_release.outputs.version }} \
-          --target ${{ env.MAIN_BRANCH }} \
-          --title ${{ github.event.inputs.release_name }} \
-          --generate-notes
+      # - name: Create release
+      #   if: ${{ fromJSON(github.event.inputs.automatic_mode) == true && fromJSON(github.event.inputs.prerelease)
+      #     == false}}
+      #   run: |
+      #     gh release create ${{ steps.catkin_release.outputs.version }} \
+      #     --target ${{ env.MAIN_BRANCH }} \
+      #     --title ${{ github.event.inputs.release_name }} \
+      #     --generate-notes
 
       - name: Checkout to devel branch
         if: ${{ env.DEVEL_BRANCH != env.MAIN_BRANCH && fromJSON(inputs.automatic_mode) == true }}
@@ -116,8 +116,8 @@ jobs:
           ref: ${{ env.DEVEL_BRANCH }}
           fetch-depth: 0
 
-      - name: Update devel branch
-        if: ${{ env.DEVEL_BRANCH != env.MAIN_BRANCH && fromJSON(inputs.automatic_mode) == true }}
-        run: |
-          git pull origin ${{ env.MAIN_BRANCH }}
-          git push origin ${{ env.DEVEL_BRANCH }}
+      # - name: Update devel branch
+      #   if: ${{ env.DEVEL_BRANCH != env.MAIN_BRANCH && fromJSON(inputs.automatic_mode) == true }}
+      #   run: |
+      #     git pull origin ${{ env.MAIN_BRANCH }}
+      #     git push origin ${{ env.DEVEL_BRANCH }}
