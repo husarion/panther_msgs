@@ -2,6 +2,9 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.4 (2024-06-28)
 ------------------
 * Bugfix: Grant permission and add warning in release workflow (`#71 <https://github.com/husarion/panther_msgs/issues/71>`_)
