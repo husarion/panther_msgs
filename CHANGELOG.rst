@@ -2,8 +2,8 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.4 (2024-06-28)
+------------------
 * Add grant permission step in workflow
 * hotfix-allow-unshallow-copy
 * Add ChargingStatus message (`#64 <https://github.com/husarion/panther_msgs/issues/64>`_)
