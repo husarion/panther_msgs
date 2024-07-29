@@ -11,3 +11,4 @@ panther_msgs/RuntimeError right_motor_runtime_error
 bool motor_states_data_timed_out
 bool driver_state_data_timed_out
 bool can_net_err
+bool heartbeat_timeout_error
