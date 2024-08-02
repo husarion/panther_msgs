@@ -2,6 +2,17 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#76 <https://github.com/husarion/panther_msgs/issues/76>`_ from husarion/hotfix-handle-can-timeout
+* Rename can communication errors
+* Add heartbeat timeout message attribute
+* Merge pull request `#75 <https://github.com/husarion/panther_msgs/issues/75>`_ from husarion/ros2-grant-permission
+* Uncomment steps
+* Test checking out
+* Grant permission before main checkout
+* Contributors: Jan brzyk, Paweł Irzyk, pawelirh
+
 2.0.4 (2024-06-28)
 ------------------
 * Bugfix: Grant permission and add warning in release workflow (`#71 <https://github.com/husarion/panther_msgs/issues/71>`_)
