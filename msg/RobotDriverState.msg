@@ -1,6 +1,6 @@
 std_msgs/Header header
 
-panther_msgs/DriverStateNamed[] drivers_states
+panther_msgs/DriverStateNamed[] driver_states
 
 bool error
 bool write_pdo_cmds_error
