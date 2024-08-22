@@ -3,4 +3,4 @@ string NAME_FRONT = "front"
 string NAME_REAR = "rear"
 
 string name
-panther_msgs/MotorControllerState state
+panther_msgs/DriverState state

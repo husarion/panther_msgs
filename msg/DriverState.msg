@@ -1,8 +1,14 @@
-std_msgs/Header header
+float32 voltage
+float32 current
+float32 temperature
+float32 heatsink_temperature
 
-panther_msgs/MotorController[] motor_controllers
+panther_msgs/FaultFlag fault_flag
+panther_msgs/ScriptFlag script_flag
+panther_msgs/RuntimeError left_motor_runtime_error
+panther_msgs/RuntimeError right_motor_runtime_error
 
-bool error
-bool write_pdo_cmds_error
-bool read_pdo_motor_states_error
-bool read_pdo_driver_state_error
+bool motor_states_data_timed_out
+bool driver_state_data_timed_out
+bool can_error
+bool heartbeat_timeout
