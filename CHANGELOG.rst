@@ -2,6 +2,9 @@
 Changelog for package panther_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.1 (2024-09-05)
+------------------
+
 2.1.0 (2024-08-02)
 ------------------
 * Merge pull request `#76 <https://github.com/husarion/panther_msgs/issues/76>`_ from husarion/hotfix-handle-can-timeout
