@@ -4,5 +4,5 @@ int8 STANDBY = 1
 int8 DOCKING = 2
 int8 SUCCESS = 3
 
-uint16 state_id
+int8 state_id
 string state_name
